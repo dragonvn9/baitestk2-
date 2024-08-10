@@ -146,8 +146,14 @@ form input[type="text"] {
 
 .bi-check-square {
   background-color: #007bff;
+  
 }
 
 .bi-square {
   color: #6c757d; 
+  
+}
+.completed {
+  text-decoration: line-through;
+  
 }

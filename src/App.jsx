@@ -92,7 +92,7 @@ function App() {
         <div className="tabs-content">
           <ul className={toggle ===1 ? "active-list" : "list"}> 
             {listtodos.map((todo, index) => (
-              <li key = {index}>
+              <li key = {index} className={todo.completed ? 'completed' : ''}>
                 <i className={"h5 me-2 " + (todo.completed ? "bi bi-check-square" : "bi bi-square" )} 
                 onClick={()=>changeTaskStatus(index)}></i>
                   {todo.task}
@@ -112,7 +112,7 @@ function App() {
           </ul>
           <ul className={toggle ===3 ? "active-list" : "list"}> 
             {listtodos.filter(todo => todo.completed).map((todo, index) => ( 
-                <li key={index}>
+                <li key={index} className={todo.completed ? 'completed' : ''}>
                   <i className={"h5 me-2 bi bi-check-square"}></i>
                   {todo.task}
                   <i className="bi bi-trash" onClick={() =>handleDelete(todo.task)}></i>
