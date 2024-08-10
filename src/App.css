@@ -1,38 +1,153 @@
+
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 20px;
+  background-color: #e9ecef; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.todo-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tabs-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.tab {
+  display: inline-block; 
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  background-color: #f1f3f5; 
+  color: #495057; 
+  margin: 0; 
+  box-sizing: border-box; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab-active {
+  background-color: #007bff; 
+  color: white; 
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0
+  
+}
+
+
+.tab:hover {
+  background-color: #dee2e6; 
+}
+
+
+.tabs-content {
+  padding: 20px;
+  text-align: left; 
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f8f9fa; 
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+
+.active-list {
+  display: block;
+}
+
+
+.list {
+  display: none;
+}
+
+
+.bi-trash {
+  cursor: pointer;
+  float: right; 
+  
+}
+
+
+.btn-delete-All {
+  float: right; 
+  background-color: red; 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+form input[type="text"] {
+  width: calc(100% - 120px); 
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 10px; 
+}
+
+
+.btn-add {
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+.btn-add:active {
+  background-color: #0056b3; 
+}
+
+
+.h5.me-2 {
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-right: 10px; 
+  transition: color 0.3s;
+}
+
+
+.bi-check-square {
+  background-color: #007bff;
+}
+
+.bi-square {
+  color: #6c757d; 
 }
